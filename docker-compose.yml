@@ -1,0 +1,27 @@
+version: '3.8'
+services:
+  devopsproject:
+    build: .
+    container_name: DevopsProject
+    hostname: DevopsProject
+    ports:
+      - "8000:8000"
+  devopsprojectfe:
+    build: ./FE
+    container_name: DevopsProjectFE
+    hostname: DevopsProjectFE
+    ports:
+      - "8080:8080"
+  mongo:
+    image: mongo:5.0
+    container_name: DevopsMongo
+    hostname: DevopsMongo
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=user
+      - MONGO_INITDB_ROOT_PASSWORD=password1!
+    volumes:
+      - mongo-data:/data/db
+      - mongo-configdb:/data/configdb
+volumes:
+  mongo-data:
+  mongo-configdb:
