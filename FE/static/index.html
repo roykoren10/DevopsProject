@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>DevopsApp</title>
+</head>
+<body onload="loadList()">
+    <div class="header">
+        <h1>Why is Devops great?</h1>
+    </div>
+    <br><br>
+    <form class="form">
+        <input id="insert-input" class="form__input" type="text" name="Name" size="20">
+        <button id="insert-sentence" class="insert-button" type="button" onClick="insertSentence()">Insert!</button>
+    </form>
+    <br> <br>
+    <ul id="sentence-list">
+    </ul>
+</body>
+</html>
