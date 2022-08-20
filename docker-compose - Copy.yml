@@ -1,13 +1,13 @@
 version: '3.8'
 services:
   devopsproject:
-    image: roykoren10/devopsproject:main
+    build: .
     container_name: DevopsProject
     hostname: DevopsProject
     ports:
       - "8000:8000"
   devopsprojectfe:
-    image: roykoren10/devopsprojectfe:main
+    build: ./FE
     container_name: DevopsProjectFE
     hostname: DevopsProjectFE
     ports:
