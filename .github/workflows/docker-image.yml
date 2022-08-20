@@ -56,7 +56,7 @@ jobs:
         key: ${{ secrets.KEY }}
         port: ${{ secrets.PORT }}
         source: "docker-compose.yml"
-        target: "/var/lib/docker/devops-project"    
+        target: "/home/ubuntu/devops-project"    
         
     - name: executing remote ssh commands using ssh key
       uses: appleboy/ssh-action@master
