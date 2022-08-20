@@ -20,7 +20,7 @@ jobs:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
     
-    - name: Extract metadata (tags, labels) for Docker
+    - name: Extract metadata (tags, labels) for Docke
       id: meta
       uses: docker/metadata-action@v3
       with:
