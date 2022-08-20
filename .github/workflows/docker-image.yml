@@ -15,7 +15,7 @@ jobs:
         Tagname: $(date +%s)
     steps:
     - uses: actions/checkout@v3
-    - run: export tagname=$(date +%s)
+    - run: echo "$Tagname" 
     - name: Build the BE image
       run: docker build . --file Dockerfile --tag devopsproject:$Tagname
     - run: docker push roykoren10/devopsproject:$Tagname
