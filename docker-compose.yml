@@ -4,6 +4,9 @@ services:
     image: roykoren10/devopsproject:main
     container_name: DevopsProject
     hostname: DevopsProject
+    environment:
+      - DB_USER=${MONGO_INITDB_ROOT_USERNAME}
+      - DB_PASSWORD=${MONGO_INITDB_ROOT_PASSWORD}
     ports:
       - "8000:8000"
   devopsprojectfe:
