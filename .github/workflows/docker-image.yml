@@ -66,5 +66,4 @@ jobs:
         key: ${{ secrets.KEY }}
         port: ${{ secrets.PORT }}
         script: |
-            ls /home/ubuntu/devops-project
-            sudo docker-compose up -d
+            sudo docker-compose -f /home/ubuntu/devops-project up -d
