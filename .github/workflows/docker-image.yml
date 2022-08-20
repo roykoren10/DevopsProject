@@ -11,13 +11,14 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-
+    env:
+        Tagname: $(date +%s)
     steps:
     - uses: actions/checkout@v3
     - run: export tagname=$(date +%s)
     - name: Build the BE image
-      run: docker build . --file Dockerfile --tag devopsproject:1
-    - run: docker push roykoren10/devopsproject:$tagname
+      run: docker build . --file Dockerfile --tag devopsproject:$Tagname
+    - run: docker push roykoren10/devopsproject:$Tagname
     - name: Build the FE image
-      run: docker build ./FE --file Dockerfile --tag devopsprojectfe:$tagname
+      run: docker build ./FE --file Dockerfile --tag devopsprojectfe:$Tagname
     - run: docker push roykoren10/devopsproject:$tagname
