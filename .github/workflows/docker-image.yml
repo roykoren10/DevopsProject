@@ -12,7 +12,7 @@ jobs:
 
     runs-on: ubuntu-latest
     env:
-        Tagname: $(date +%s)
+        Tagname: date +%s
     steps:
     - uses: actions/checkout@v3
     - run: echo "$Tagname" 
