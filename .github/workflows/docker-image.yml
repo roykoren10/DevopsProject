@@ -66,4 +66,6 @@ jobs:
         key: ${{ secrets.KEY }}
         port: ${{ secrets.PORT }}
         script: |
+            sudo docker pull roykoren10/devopsproject:main
+            sudo docker pull roykoren10/devopsprojectfe:main
             sudo docker-compose -f /home/ubuntu/devops-project/docker-compose.yml up -d
