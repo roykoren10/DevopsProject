@@ -1,4 +1,4 @@
-const BACKEND_HOST = 'http://127.0.0.1:8000/'
+const BACKEND_HOST = 'http://ec2-23-20-250-250.compute-1.amazonaws.com:8000/'
 
 const loadList = () => {
     fetch(BACKEND_HOST + 'list').then(response => response.json())
