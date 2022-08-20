@@ -57,4 +57,4 @@ jobs:
         port: ${{ secrets.PORT }}
         script: |
             pwd
-            docker ps
+            sudo docker ps
