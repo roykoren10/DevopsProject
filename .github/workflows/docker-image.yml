@@ -69,6 +69,6 @@ jobs:
             sudo docker pull roykoren10/devopsproject:main
             sudo docker pull roykoren10/devopsprojectfe:main
             touch /home/ubuntu/devops-project/.env
-            echo ${{ secrets.MONGO_INITDB_ROOT_USERNAME }} > /home/ubuntu/devops-project/.env
-            echo ${{ secrets.MONGO_INITDB_ROOT_PASSWORD }} > /home/ubuntu/devops-project/.env
+            echo "MONGO_INITDB_ROOT_USERNAME=" ${{ secrets.MONGO_INITDB_ROOT_USERNAME }} >> /home/ubuntu/devops-project/.env
+            echo "MONGO_INITDB_ROOT_PASSWORD=" ${{ secrets.MONGO_INITDB_ROOT_PASSWORD }} >> /home/ubuntu/devops-project/.env
             sudo docker-compose -f /home/ubuntu/devops-project/docker-compose.yml --env-file /home/ubuntu/devops-project/.env up -d
