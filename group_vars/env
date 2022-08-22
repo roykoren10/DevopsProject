@@ -1,0 +1,16 @@
+server_name: ansible-test-1
+env: kuku
+
+vpc_name: vpc-test
+network: 10.10.0.0/16
+subnet_cidr: 10.10.0.0/24
+aws_region: eu-central-1
+subnet: eu-central-1a
+
+keypair: newkey
+
+aws_centos_ami: ami-065deacbcaac64cf2
+Server_type: t2.micro
+server_volume_size: 8
+repo: https://github.com/roykoren10/DevopsProject.git
+cert: group_vars/newkey.pem
