@@ -11,7 +11,7 @@ services:
     container_name: DevopsProjectFE
     hostname: DevopsProjectFE
     ports:
-      - "8080:8080"
+      - "80:80"
   mongo:
     image: mongo:5.0
     container_name: DevopsMongo
