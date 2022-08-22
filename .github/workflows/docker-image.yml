@@ -68,6 +68,7 @@ jobs:
         script: |
             sudo docker pull roykoren10/devopsproject:main
             sudo docker pull roykoren10/devopsprojectfe:main
+            mkdir /home/ubuntu/devops-project
             touch /home/ubuntu/devops-project/.env
             echo "MONGO_INITDB_ROOT_USERNAME="${{ secrets.MONGO_INITDB_ROOT_USERNAME }} >> /home/ubuntu/devops-project/.env
             echo "MONGO_INITDB_ROOT_PASSWORD="${{ secrets.MONGO_INITDB_ROOT_PASSWORD }} >> /home/ubuntu/devops-project/.env
